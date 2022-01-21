@@ -2,7 +2,7 @@ FROM ubuntu:focal
 ARG TARGETPLATFORM
 RUN if [ "$TARGETPLATFORM" = "linux/amd64" ] ; then export ARCH="amd64" ; fi
 RUN if [ "$TARGETPLATFORM" = "linux/arm64" ] ; then export ARCH="aarch64" ; fi
-RUN echo $ARCH
+RUN echo $[ARCH]
 ENV OS=linux
 ENV JAVA_VER=java11
 ENV GRAALVM_VER=21.3.0
