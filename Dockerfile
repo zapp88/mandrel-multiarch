@@ -1,7 +1,6 @@
 FROM ubuntu:focal
-ARG TARGETPLATFORM
-RUN if [ $TARGETPLATFORM = linux/amd64 ] ; then export ARCH=amd64  ; else echo NOT_SET ; fi
-RUN if [ $TARGETPLATFORM = linux/arm64 ] ; then export ARCH=aarch64  ; else echo NOT_SET ; fi
+ARG TARGETPLATFORM linux/amd64
+RUN if [ x$TARGETPLATFORM = xlinux/amd64 ] ; then export ARCH=amd64 ; elif [ x$TARGETPLATFORM = xlinux/arm64 ] ; then export ARCH=aarch64 ; fi
 RUN echo $ARCH
 RUN export OS=linux
 RUN export JAVA_VER=java11
