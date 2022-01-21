@@ -16,7 +16,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Retag images
-      - run: |
+        run: |
           docker pull zapp88/graalvm-multiarch:manifest-amd64-java17-21.3.0
           docker pull zapp88/graalvm-multiarch:manifest-arm64-java17-21.3.0
           docker manifest create zapp88/graalvm-multiarch:manifest-java11-21.3.0 --amend zapp88/graalvm-multiarch:manifest-amd64-java17-21.3.0 --amend zapp88/graalvm-multiarch:manifest-arm64-java17-21.3.0
