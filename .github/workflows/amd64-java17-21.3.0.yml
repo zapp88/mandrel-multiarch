@@ -30,4 +30,4 @@ jobs:
             ARCH=amd64
           platforms: linux/amd64
           tags: |
-            zapp88/graalvm-multiarch:manifest-amd64-java17-21.3.0
+            zapp88/graalvm-multiarch:amd64-java17-graalvm21.3.0

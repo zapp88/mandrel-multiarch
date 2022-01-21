@@ -28,4 +28,4 @@ jobs:
             ARCH=aarch64
           platforms: linux/arm64
           tags: |
-            zapp88/graalvm-multiarch:manifest-arm64-java11-21.3.0
+            zapp88/graalvm-multiarch:arm64-java11-graalvm21.3.0
