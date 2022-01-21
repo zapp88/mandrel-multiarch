@@ -25,6 +25,5 @@ jobs:
           docker manifest push zapp88/graalvm-multiarch:manifest-java17-21.3.0
       - name: Pull images
         run: |
-          docker pull zapp88/graalvm-multiarch:manifest-java17-21.3.0
-          docker tag zapp88/graalvm-multiarch:manifest-java17-21.3.0 zapp88/graalvm-multiarch:manifest-java17-latest
-          docker push zapp88/graalvm-multiarch:manifest-java17-latest
+          docker manifest create zapp88/graalvm-multiarch:manifest-java17-latest --amend zapp88/graalvm-multiarch:manifest-amd64-java17-21.3.0 --amend zapp88/graalvm-multiarch:manifest-arm64-java17-21.3.0
+          docker manifest push zapp88/graalvm-multiarch:manifest-java17-latest
