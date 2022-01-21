@@ -1,0 +1,25 @@
+name: Publish latest java 17 manifest
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push image to Docker registry
+        uses: docker/build-push-action@v2.8.0
+      - run: |
+          docker pull zapp88/graalvm-multiarch:manifest-amd64-java17-21.3.0
+          docker pull zapp88/graalvm-multiarch:manifest-arm64-java17-21.3.0
+          docker manifest create zapp88/graalvm-multiarch:manifest-java11-21.3.0 --amend zapp88/graalvm-multiarch:manifest-amd64-java17-21.3.0 --amend zapp88/graalvm-multiarch:manifest-arm64-java17-21.3.0
+          docker manifest push zapp88/graalvm-multiarch:manifest-java17-21.3.0
+          docker tag zapp88/graalvm-multiarch:manifest-java17-21.3.0 zapp88/graalvm-multiarch:manifest-java17-latest
+          docker push zapp88/graalvm-multiarch:manifest-java17-latest
