@@ -26,7 +26,10 @@ jobs:
         uses: docker/build-push-action@v2.8.0
         with:
           push: true
-          build-args: JAVA_VER=java11,GRAALVM_VER=21.3.0,ARCH=aarch64
+          build-args: |
+            JAVA_VER=java11
+            GRAALVM_VER=21.3.0
+            ARCH=aarch64
           platforms: linux/arm64
           tags: |
             zapp88/graalvm-multiarch:manifest-arm64-java11-21.3.0
