@@ -1,4 +1,4 @@
-name: Build and Publish aarch64-java11-graalvm21.3.0
+name: Build and Publish aarch64-java11-mandrel21.3.0.0
 
 on: workflow_dispatch
 
@@ -24,8 +24,8 @@ jobs:
           push: true
           build-args: |
             JAVA_VER=java11
-            GRAALVM_VER=21.3.0
+            MANDREL_VER=21.3.0.0
             ARCH=aarch64
           platforms: linux/arm64
           tags: |
-            zapp88/graalvm-multiarch:arm64-java11-graalvm21.3.0
+            zapp88/mandrel-multiarch:arm64-java11-mandrel21.3.0.0

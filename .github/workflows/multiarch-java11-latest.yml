@@ -17,13 +17,13 @@ jobs:
 
       - name: Pull images
         run: |
-          docker pull zapp88/graalvm-multiarch:amd64-java11-graalvm21.3.0
-          docker pull zapp88/graalvm-multiarch:arm64-java11-graalvm21.3.0
+          docker pull zapp88/mandrel-multiarch:amd64-java11-mandrel21.3.0.0
+          docker pull zapp88/mandrel-multiarch:arm64-java11-mandrel21.3.0.0
       - name: Amend manifest
         run: |
-          docker manifest create zapp88/graalvm-multiarch:java11-graalvm21.3.0 --amend zapp88/graalvm-multiarch:amd64-java11-graalvm21.3.0 --amend zapp88/graalvm-multiarch:arm64-java11-graalvm21.3.0
-          docker manifest push zapp88/graalvm-multiarch:java11-graalvm21.3.0
+          docker manifest create zapp88/mandrel-multiarch:java11-mandrel21.3.0.0 --amend zapp88/mandrel-multiarch:amd64-java11-mandrel21.3.0.0 --amend zapp88/mandrel-multiarch:arm64-java11-mandrel21.3.0.0
+          docker manifest push zapp88/mandrel-multiarch:java11-mandrel21.3.0.0
       - name: Amend manifest latest
         run: |
-          docker manifest create zapp88/graalvm-multiarch:java11-latest --amend zapp88/graalvm-multiarch:amd64-java11-graalvm21.3.0 --amend zapp88/graalvm-multiarch:arm64-java11-graalvm21.3.0
-          docker manifest push zapp88/graalvm-multiarch:java11-latest
+          docker manifest create zapp88/mandrel-multiarch:java11-latest --amend zapp88/mandrel-multiarch:amd64-java11-mandrel21.3.0.0 --amend zapp88/mandrel-multiarch:arm64-java11-mandrel21.3.0.0
+          docker manifest push zapp88/mandrel-multiarch:java11-latest
