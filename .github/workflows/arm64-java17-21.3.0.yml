@@ -26,7 +26,7 @@ jobs:
           push: true
           build-args: |
             JAVA_VER=java17
-            MANDREL_VER=21.3.0.0
+            MANDREL_VER=21.3.0.0-Final
             ARCH=aarch64
           platforms: linux/arm64
           tags: |
