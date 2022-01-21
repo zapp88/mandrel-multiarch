@@ -15,8 +15,8 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag zapp88/graalvm-multiarch:linux-x86_64
       
-    - uses: docker/build-push-action@v2.8.0
     - name: Push image to Docker registry
+      uses: docker/build-push-action@v2.8.0
       with:
           push: true
           tags: zapp88/graalvm-multiarch:linux-x86_64
