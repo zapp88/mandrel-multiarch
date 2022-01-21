@@ -19,11 +19,11 @@ jobs:
         run: |
           docker pull zapp88/graalvm-multiarch:amd64-java17-graalvm21.3.0
           docker pull zapp88/graalvm-multiarch:arm64-java17-graalvm21.3.0
-      - name: Amend manifest
+      - name: Amend manifest base
         run: |
           docker manifest create zapp88/graalvm-multiarch:java17-21.3.0 --amend zapp88/graalvm-multiarch:amd64-java17-graalvm21.3.0 --amend zapp88/graalvm-multiarch:arm64-java17-graalvm21.3.0
           docker manifest push zapp88/graalvm-multiarch:java17-21.3.0
-      - name: Pull images
+      - name: Amend manifest latest
         run: |
           docker manifest create zapp88/graalvm-multiarch:java17-latest --amend zapp88/graalvm-multiarch:amd64-java17-graalvm21.3.00 --amend zapp88/graalvm-multiarch:arm64-java17-graalvm21.3.0
           docker manifest push zapp88/graalvm-multiarch:java17-latest
