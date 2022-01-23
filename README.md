@@ -7,7 +7,8 @@
 - [java11-latest](https://hub.docker.com/layers/zapp88/mandrel-multiarch/java11-latest/images/sha256-74dea283e0a0be0fe264fd21c6469458c8cb957a8baff95555eb0307afcac83c?context=explore)
 - [java11-mandrel21.3.0.0](https://hub.docker.com/layers/zapp88/mandrel-multiarch/java11-mandrel21.3.0.0/images/sha256-74dea283e0a0be0fe264fd21c6469458c8cb957a8baff95555eb0307afcac83c?context=explore)
 - [arm64-java17-mandrel21.3.0.0](https://hub.docker.com/layers/zapp88/mandrel-multiarch/arm64-java17-mandrel21.3.0.0/images/sha256-425d897f24961fc7deaf10294dad0369a9d4754e83c761bbc11852f152a423e8?context=explore)
-- [amd64-java17-mandrel21.3.0.0](https://hub.docker.com/layers/zapp88/mandrel-multiarch/amd64-java17-mandrel21.3.0.0/images/sha256-5d0c3713572ef43471abadf90a494a4ae2706827563a55a0b5ed617ff05ad1eb?context=explore) \*[amd64-java11-mandrel21.3.0.0](https://hub.docker.com/layers/zapp88/mandrel-multiarch/amd64-java11-mandrel21.3.0.0/images/sha256-74dea283e0a0be0fe264fd21c6469458c8cb957a8baff95555eb0307afcac83c?context=explore)
+- [amd64-java17-mandrel21.3.0.0](https://hub.docker.com/layers/zapp88/mandrel-multiarch/amd64-java17-mandrel21.3.0.0/images/sha256-5d0c3713572ef43471abadf90a494a4ae2706827563a55a0b5ed617ff05ad1eb?context=explore)
+- [amd64-java11-mandrel21.3.0.0](https://hub.docker.com/layers/zapp88/mandrel-multiarch/amd64-java11-mandrel21.3.0.0/images/sha256-74dea283e0a0be0fe264fd21c6469458c8cb957a8baff95555eb0307afcac83c?context=explore)
 - [arm64-java11-mandrel21.3.0.0](https://hub.docker.com/layers/zapp88/mandrel-multiarch/arm64-java11-mandrel21.3.0.0/images/sha256-594c8cf05e7a3f836779dba827a30f6fc96365e5b3587bf91a697468b004b74f?context=explore)
 
 #### Why no ':latest' tag ?
@@ -17,11 +18,11 @@ This image is provided in 3 differing versions
 
 #### Dockerfile:
 
-https://raw.githubusercontent.com/zapp88/mandrel-multiarch/master/Dockerfile
+<https://raw.githubusercontent.com/zapp88/mandrel-multiarch/master/Dockerfile>
 
 #### Where to file issues:
 
-https://github.com/zapp88/mandrel-multiarch/issues
+<https://github.com/zapp88/mandrel-multiarch/issues>
 
 Supported architectures: amd64, arm64v8
 
